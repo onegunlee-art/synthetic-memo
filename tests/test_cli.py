@@ -106,6 +106,7 @@ class MemoCliAcceptanceTests(unittest.TestCase):
         self.assertIn("list", result.stdout)
         self.assertIn("done", result.stdout)
         self.assertIn("items.json", result.stdout)
+        self.assertIn("$env:PYTHONPATH='src'", result.stdout)
 
 
 if __name__ == "__main__":
