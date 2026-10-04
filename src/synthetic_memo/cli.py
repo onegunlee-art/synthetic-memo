@@ -26,9 +26,11 @@ def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="memo",
         description=(
-            "인터넷 없이 현재 폴더의 items.json에 메모를 저장합니다. "
-            "실행: PYTHONPATH=src python -m synthetic_memo <명령>"
+            "인터넷 없이 현재 폴더의 items.json에 메모를 저장합니다.\n"
+            "PowerShell 실행:\n"
+            "  $env:PYTHONPATH='src'; python -m synthetic_memo <명령>"
         ),
+        formatter_class=argparse.RawDescriptionHelpFormatter,
     )
     commands = parser.add_subparsers(dest="command", metavar="명령")
 
